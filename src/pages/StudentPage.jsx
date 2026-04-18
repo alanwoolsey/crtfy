@@ -1,7 +1,7 @@
 import { ClipboardList, FileCheck2, GraduationCap, ShieldCheck, Users } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { CTASection, FeatureCard, SectionIntro, StatStrip } from '../components/SiteComponents'
-import BrandLogo from '../components/BrandLogo'
+import OfferingLockup from '../components/OfferingLockup'
 
 const productStats = [
   { value: 'Higher education', label: 'Built for transcript, records, admissions, and student workflow operations.' },
@@ -49,7 +49,7 @@ export default function StudentPage() {
         <div className="container page-hero-grid">
           <div>
             <span className="eyebrow">Product Offering</span>
-            <BrandLogo className="page-brand-logo" />
+            <OfferingLockup slug="crtfy-student" name="Student" className="page-brand-logo" />
             <p className="lead-copy">
               Crtfy Student brings document trust, workflow, compliance, and guided experiences together for higher education teams managing sensitive student records.
             </p>
