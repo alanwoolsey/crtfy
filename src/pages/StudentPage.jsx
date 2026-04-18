@@ -1,60 +1,44 @@
-import {
-  ArrowRight,
-  BookOpen,
-  CheckCircle2,
-  ClipboardList,
-  FileCheck2,
-  GraduationCap,
-  Landmark,
-  ShieldCheck,
-  Sparkles,
-  Users,
-} from 'lucide-react'
+import { ClipboardList, FileCheck2, GraduationCap, ShieldCheck, Users } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { CTASection, FeatureCard, SectionIntro, StatStrip } from '../components/SiteComponents'
+import BrandLogo from '../components/BrandLogo'
 
 const productStats = [
-  { value: 'Upload to insight', label: 'Turn raw transcript intake into a usable fit and transferability view' },
-  { value: 'Review with confidence', label: 'Pair recommendations with evidence, trust markers, and exceptions' },
-  { value: 'Guide the student', label: 'Translate the result into next steps, requirements, and readiness signals' },
+  { value: 'Higher education', label: 'Built for transcript, records, admissions, and student workflow operations.' },
+  { value: 'Secure records', label: 'Combines document trust, evaluation, and guided next steps around sensitive student data.' },
+  { value: 'Connected platform', label: 'Links student workflows to compliance, governance, and protected data operations.' },
 ]
 
 const productFeatures = [
   {
     icon: FileCheck2,
-    title: 'Smart transcript intake',
-    description: 'Capture PDF and image-based transcripts, extract structure, identify institutions, and normalize course and grade data.',
-    bullets: ['Heuristic-first extraction', 'AI fallback and summarization', 'Institution and catalog context'],
+    title: 'Document trust in the workflow',
+    description: 'Use the same platform to parse records, protect sensitive data, flag anomalies, and create an audit trail.',
+    bullets: ['OCR and classification', 'Fraud and exception checks', 'Protected storage'],
   },
   {
     icon: GraduationCap,
-    title: 'Program-fit and transfer views',
-    description: 'Show likely match, accepted credit patterns, gaps, and areas requiring staff review before a student disappears from the funnel.',
-    bullets: ['Pre-admit evaluations', 'Transferability estimates', 'Gap and readiness indicators'],
+    title: 'Student-facing value before application',
+    description: 'Give prospects a transcript-led front door with likely fit, program direction, and guided next steps.',
+    bullets: ['Prospect portal', 'Fit and transfer visibility', 'Microsite-style next actions'],
   },
   {
     icon: ShieldCheck,
-    title: 'Certified decision packets',
-    description: 'Wrap every output in supporting evidence, provenance, notes, exception handling, and staff signoff paths.',
-    bullets: ['Evidence panel', 'Rule lineage', 'Exportable summaries'],
+    title: 'Explainable internal decisions',
+    description: 'Give staff one place to review evidence, confidence, notes, and release actions tied to the student record.',
+    bullets: ['Decision workbench', 'Evidence and trust markers', 'Human approval paths'],
   },
   {
     icon: Users,
-    title: 'Student-facing next steps',
-    description: 'Present outcomes in clear language with a guided path for application, document completion, and enrollment readiness.',
-    bullets: ['Prospect portal', 'Action checklists', 'Personalized recommendations'],
+    title: 'Student record orchestration',
+    description: 'Unify transcripts, progress, risk, and outreach so the product becomes a broader institutional system of action.',
+    bullets: ['Student 360', 'Task orchestration', 'Advisor visibility'],
   },
   {
     icon: ClipboardList,
-    title: 'Workflow and release controls',
-    description: 'Move cases through intake, review, hold, release, and connector delivery with clear ownership and queue health visibility.',
-    bullets: ['Review queue', 'Escalations', 'Connector-triggered delivery'],
-  },
-  {
-    icon: Sparkles,
-    title: 'Future-state AI teammates',
-    description: 'Add AI where it accelerates summarization, classification, and communication without replacing trust, evidence, or oversight.',
-    bullets: ['Summary generation', 'Recommended actions', 'Human-supervised automation'],
+    title: 'Connected platform workflows',
+    description: 'Crtfy Student connects into document security, AI governance, encryption, and broader operational controls.',
+    bullets: ['Compliance handoff', 'Shared policy controls', 'Cross-team coordination'],
   },
 ]
 
@@ -64,25 +48,18 @@ export default function StudentPage() {
       <section className="page-hero page-hero-product">
         <div className="container page-hero-grid">
           <div>
-            <span className="eyebrow">Product</span>
-            <h1>crtfy Student</h1>
+            <span className="eyebrow">Product Offering</span>
+            <BrandLogo className="page-brand-logo" />
             <p className="lead-copy">
-              The flagship experience for transcript-aware intake, pre-admit intelligence, explainable decisioning,
-              and student-ready next steps.
+              Crtfy Student brings document trust, workflow, compliance, and guided experiences together for higher education teams managing sensitive student records.
             </p>
             <div className="hero-actions">
-              <Link to="/demo" className="button button-primary">View walkthrough</Link>
-              <a href="#capabilities" className="button button-secondary">Explore capabilities</a>
+              <Link to="/product/prospect-portal" className="button button-primary">Open product view</Link>
+              <a href="#capabilities" className="button button-secondary">See how it fits the platform</a>
             </div>
           </div>
-          <div className="product-panel">
-            <div className="product-stack-card">
-              <div className="stack-top"><Landmark size={18} /> Incoming Transcript</div>
-              <div className="stack-arrow" />
-              <div className="stack-middle"><BookOpen size={18} /> Program + Catalog Context</div>
-              <div className="stack-arrow" />
-              <div className="stack-bottom"><CheckCircle2 size={18} /> Certified Decision Packet</div>
-            </div>
+          <div className="product-panel visual-panel">
+            <img className="product-screenshot product-screenshot-card" src="/product-screens/prospect-portal.png" alt="Crtfy Student product screenshot" />
           </div>
         </div>
       </section>
@@ -97,8 +74,8 @@ export default function StudentPage() {
         <div className="container">
           <SectionIntro
             eyebrow="Capabilities"
-            title="A complete story for what the product does today and what it will do next."
-            description="This page should feel strong enough for buyers now, while leaving room for the roadmap to mature into the complete vision."
+            title="A higher education offering built on the broader Crtfy platform."
+            description="Use Crtfy Student to coordinate transcript intake, document trust, review workflows, and student-facing next steps."
           />
           <div className="feature-grid three-up">
             {productFeatures.map((feature) => (
@@ -112,31 +89,24 @@ export default function StudentPage() {
         <div className="container two-column-story">
           <div>
             <SectionIntro
-              eyebrow="Key workflows"
-              title="Tell the buyer exactly how the experience fits into their world."
-              description="The website should show that the product is not abstract AI. It is operational software for teams who need throughput, consistency, and trust."
+              eyebrow="Where it fits"
+              title="Designed for records, admissions, compliance, and IT teams working together."
+              description="Crtfy Student supports higher education workflows that depend on trusted records, explainable review, and clear next steps."
             />
             <div className="workflow-list">
-              <div><strong>1. Intake</strong><span>Receive transcript, classify source, parse structure, and identify institution context.</span></div>
-              <div><strong>2. Evaluate</strong><span>Apply heuristics, compare catalog patterns, generate recommendations, and surface confidence.</span></div>
-              <div><strong>3. Review</strong><span>Inspect evidence, resolve flags, add notes, and approve or escalate the packet.</span></div>
-              <div><strong>4. Release</strong><span>Deliver results to staff, connector targets, or the student-facing experience with complete audit history.</span></div>
+              <div><strong>1. Registrar / Admissions</strong><span>Lead with transcript intake, document trust, and early workflow speed.</span></div>
+              <div><strong>2. Records / Compliance</strong><span>Extend into audit trails, redaction, policy controls, and data handling.</span></div>
+              <div><strong>3. IT / Security</strong><span>Connect the product to encryption, cyber operations, and broader governance.</span></div>
+              <div><strong>4. Connected workflows</strong><span>Extend the same controls and workflow logic into other records-heavy or compliance-heavy environments.</span></div>
             </div>
           </div>
           <div className="image-panel mock-right-panel">
-            <div className="case-card">
-              <span className="eyebrow">Example student</span>
-              <h3>Transfer readiness summary</h3>
-              <div className="summary-grid">
-                <div><span>Likely fit</span><strong>High</strong></div>
-                <div><span>Accepted credits</span><strong>28</strong></div>
-                <div><span>Review flags</span><strong>1</strong></div>
-                <div><span>Confidence</span><strong>92%</strong></div>
+            <div className="product-screen-stack">
+              <img className="product-screenshot product-screenshot-card" src="/product-screens/prospect-portal.png" alt="Prospect Portal screenshot" />
+              <div className="product-screen-row">
+                <img className="product-screenshot product-screenshot-card" src="/product-screens/student-profile.png" alt="Student profile screenshot" />
+                <img className="product-screenshot product-screenshot-card" src="/product-screens/decision-studio.png" alt="Decision Studio screenshot" />
               </div>
-              <p>
-                The result is not just a score. It includes why the result happened, what remains uncertain, and what the
-                student or staff member should do next.
-              </p>
             </div>
           </div>
         </div>
@@ -144,7 +114,14 @@ export default function StudentPage() {
 
       <section className="section-block">
         <div className="container">
-          <CTASection />
+          <CTASection
+            title="See how Crtfy Student connects into the broader platform."
+            description="Explore the products and services that support student records, secure operations, governance, and compliance."
+            primaryLabel="See the platform"
+            primaryTo="/platform"
+            secondaryLabel="See Verify"
+            secondaryTo="/products/verify"
+          />
         </div>
       </section>
     </>
