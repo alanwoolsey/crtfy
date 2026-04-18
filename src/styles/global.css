@@ -205,6 +205,70 @@ button { font: inherit; }
   border-radius: 14px;
 }
 
+.mobile-nav-panel {
+  display: none;
+  padding: 0 0 16px;
+}
+
+.mobile-nav-group,
+.mobile-nav-links,
+.mobile-nav-actions,
+.mobile-nav-submenu {
+  display: grid;
+  gap: 10px;
+}
+
+.mobile-nav-group,
+.mobile-nav-links,
+.mobile-nav-actions {
+  margin-top: 10px;
+}
+
+.mobile-nav-toggle,
+.mobile-nav-item {
+  width: 100%;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 0 14px;
+  border: 1px solid rgba(217,227,240,0.9);
+  border-radius: 8px;
+  background: rgba(255,255,255,0.96);
+  color: #223249;
+  font-weight: 600;
+}
+
+.mobile-nav-toggle {
+  cursor: pointer;
+}
+
+.mobile-nav-item.active,
+.mobile-nav-item:hover,
+.mobile-nav-toggle:hover {
+  color: var(--primary);
+  border-color: rgba(15,79,214,0.24);
+  background: rgba(15,79,214,0.06);
+}
+
+.mobile-nav-submenu {
+  padding-left: 12px;
+}
+
+.mobile-nav-item-submenu {
+  min-height: 44px;
+  font-size: 0.94rem;
+}
+
+.mobile-nav-chevron {
+  transition: transform 0.18s ease;
+}
+
+.mobile-nav-chevron.is-open {
+  transform: rotate(180deg);
+}
+
 .button {
   display: inline-flex;
   align-items: center;
@@ -1472,6 +1536,7 @@ th {
   .desktop-nav,
   .nav-actions .button-secondary { display: none; }
   .mobile-menu-button { display: inline-grid; place-items: center; }
+  .mobile-nav-panel { display: block; }
   .hero-grid,
   .page-hero-grid,
   .two-column-story,
@@ -1501,6 +1566,12 @@ th {
   .hero-copy h1,
   .page-hero h1,
   .narrow-hero h1 { max-width: none; }
+  .nav-actions {
+    margin-left: auto;
+  }
+  .nav-actions .button-primary {
+    display: none;
+  }
   .offering-lockup {
     gap: 10px;
   }

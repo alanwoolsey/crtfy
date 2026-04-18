@@ -1,4 +1,5 @@
-import { NavLink, Outlet, Route, Routes } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+import { NavLink, Outlet, Route, Routes, useLocation } from 'react-router-dom'
 import { Blocks, Building2, ChevronDown, Menu, ShieldCheck, Sparkles } from 'lucide-react'
 import HomePage from './pages/HomePage'
 import StudentPage from './pages/StudentPage'
@@ -18,6 +19,17 @@ const productMenuItems = productOfferings
 const serviceMenuItems = [...managedServices, ...advisoryOfferings]
 
 function Topbar() {
+  const location = useLocation()
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mobileProductsOpen, setMobileProductsOpen] = useState(false)
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false)
+
+  useEffect(() => {
+    setMobileMenuOpen(false)
+    setMobileProductsOpen(false)
+    setMobileServicesOpen(false)
+  }, [location.pathname])
+
   return (
     <header className="site-header">
       <div className="container nav-shell">
@@ -65,11 +77,75 @@ function Topbar() {
         <div className="nav-actions">
           <NavLink to="/products/verify" className="button button-secondary">See products</NavLink>
           <a href="#contact" className="button button-primary">Talk to Crtfy</a>
-          <button className="mobile-menu-button" aria-label="Open menu">
+          <button
+            className="mobile-menu-button"
+            aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-navigation"
+            onClick={() => setMobileMenuOpen((open) => !open)}
+          >
             <Menu size={20} />
           </button>
         </div>
       </div>
+      {mobileMenuOpen ? (
+        <div className="container mobile-nav-panel" id="mobile-navigation">
+          <div className="mobile-nav-group">
+            <button
+              type="button"
+              className="mobile-nav-toggle"
+              aria-expanded={mobileProductsOpen}
+              onClick={() => setMobileProductsOpen((open) => !open)}
+            >
+              <span>Products</span>
+              <ChevronDown size={16} className={mobileProductsOpen ? 'mobile-nav-chevron is-open' : 'mobile-nav-chevron'} />
+            </button>
+            {mobileProductsOpen ? (
+              <div className="mobile-nav-submenu">
+                {productMenuItems.map((item) => (
+                  <NavLink key={item.to} to={item.to} className="mobile-nav-item mobile-nav-item-submenu">
+                    {item.title}
+                  </NavLink>
+                ))}
+              </div>
+            ) : null}
+          </div>
+
+          <div className="mobile-nav-group">
+            <button
+              type="button"
+              className="mobile-nav-toggle"
+              aria-expanded={mobileServicesOpen}
+              onClick={() => setMobileServicesOpen((open) => !open)}
+            >
+              <span>Services</span>
+              <ChevronDown size={16} className={mobileServicesOpen ? 'mobile-nav-chevron is-open' : 'mobile-nav-chevron'} />
+            </button>
+            {mobileServicesOpen ? (
+              <div className="mobile-nav-submenu">
+                {serviceMenuItems.map((item) => (
+                  <NavLink key={item.to} to={item.to} className="mobile-nav-item mobile-nav-item-submenu">
+                    {item.title}
+                  </NavLink>
+                ))}
+              </div>
+            ) : null}
+          </div>
+
+          <div className="mobile-nav-links">
+            {primaryNav.filter((item) => item.label !== 'Products' && item.label !== 'Services').map((item) => (
+              <NavLink key={item.to} to={item.to} className="mobile-nav-item">
+                {item.label}
+              </NavLink>
+            ))}
+          </div>
+
+          <div className="mobile-nav-actions">
+            <NavLink to="/products/verify" className="button button-secondary">See products</NavLink>
+            <a href="#contact" className="button button-primary">Talk to Crtfy</a>
+          </div>
+        </div>
+      ) : null}
     </header>
   )
 }
