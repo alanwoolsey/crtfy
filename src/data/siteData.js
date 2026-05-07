@@ -70,6 +70,20 @@ export const categoryCards = [
 ]
 
 export const productOfferings = [
+    {
+    slug: 'crtfy-student',
+    to: '/products/crtfy-student',
+    eyebrow: 'Industry Product',
+    title: 'Crtfy Student',
+    shortTitle: 'Crtfy Student',
+    icon: GraduationCap,
+    description: 'A higher-ed product offering that combines evaluation, verification, certification, and guided engagement around student records.',
+    image: '/product-screens/prospect-portal.png',
+    capabilities: [],
+    proof: ['Higher education workflows', 'Admissions, registrar, and records operations', 'Built on the broader Crtfy platform'],
+    departments: ['Admissions and registrar', 'Records and compliance', 'IT and security'],
+    outcomes: ['Faster transcript and record review', 'More trusted student record workflows', 'Stronger coordination across teams'],
+  },
   {
     slug: 'evaluate',
     to: '/products/evaluate',
@@ -106,24 +120,24 @@ export const productOfferings = [
     departments: ['Records and intake teams', 'Compliance office', 'Public-sector document review teams'],
     outcomes: ['Lower fraud exposure', 'Fewer manual checks', 'A clean trust layer for sensitive workflows'],
   },
-  {
-    slug: 'certify',
-    to: '/products/certify',
-    eyebrow: 'Core Product',
-    title: 'Crtfy Certify',
-    shortTitle: 'Certify',
-    icon: BadgeCheck,
-    description: 'Decision and compliance engine for audit trails, explainability, human review, and regulatory alignment.',
-    image: '/product-screens/decision-studio.png',
-    proof: ['Audit trails and explainability', 'Regulatory alignment', 'Human review and approval'],
-    capabilities: [
-      { icon: BadgeCheck, title: 'Explainable decisions', description: 'Make outcomes readable, reviewable, and tied to the evidence that supports them.', bullets: ['Decision packets', 'Evidence panels', 'Human rationale'] },
-      { icon: Workflow, title: 'Approval and exception flow', description: 'Bring compliance logic, release controls, and oversight into the same operating surface.', bullets: ['Approval paths', 'Exception handling', 'Release workflows'] },
-      { icon: ShieldCheck, title: 'Regulatory alignment', description: 'Keep operational decisions aligned with the frameworks and policies teams must defend.', bullets: ['Policy mapping', 'Audit readiness', 'Evidence retention'] },
-    ],
-    departments: ['Compliance and audit', 'Operations leaders', 'Program owners'],
-    outcomes: ['Stronger compliance posture', 'More defensible decisions', 'Less friction during audits'],
-  },
+  // {
+  //   slug: 'certify',
+  //   to: '/products/certify',
+  //   eyebrow: 'Core Product',
+  //   title: 'Crtfy Certify',
+  //   shortTitle: 'Certify',
+  //   icon: BadgeCheck,
+  //   description: 'Decision and compliance engine for audit trails, explainability, human review, and regulatory alignment.',
+  //   image: '/product-screens/decision-studio.png',
+  //   proof: ['Audit trails and explainability', 'Regulatory alignment', 'Human review and approval'],
+  //   capabilities: [
+  //     { icon: BadgeCheck, title: 'Explainable decisions', description: 'Make outcomes readable, reviewable, and tied to the evidence that supports them.', bullets: ['Decision packets', 'Evidence panels', 'Human rationale'] },
+  //     { icon: Workflow, title: 'Approval and exception flow', description: 'Bring compliance logic, release controls, and oversight into the same operating surface.', bullets: ['Approval paths', 'Exception handling', 'Release workflows'] },
+  //     { icon: ShieldCheck, title: 'Regulatory alignment', description: 'Keep operational decisions aligned with the frameworks and policies teams must defend.', bullets: ['Policy mapping', 'Audit readiness', 'Evidence retention'] },
+  //   ],
+  //   departments: ['Compliance and audit', 'Operations leaders', 'Program owners'],
+  //   outcomes: ['Stronger compliance posture', 'More defensible decisions', 'Less friction during audits'],
+  // },
   {
     slug: 'engage',
     to: '/products/engage',
@@ -160,20 +174,7 @@ export const productOfferings = [
     departments: ['Operations leadership', 'Enrollment analytics', 'Agency program managers'],
     outcomes: ['Earlier risk visibility', 'Better resource allocation', 'Clearer operating decisions'],
   },
-  {
-    slug: 'crtfy-student',
-    to: '/products/crtfy-student',
-    eyebrow: 'Industry Product',
-    title: 'Crtfy Student',
-    shortTitle: 'Crtfy Student',
-    icon: GraduationCap,
-    description: 'A higher-ed product offering that combines evaluation, verification, certification, and guided engagement around student records.',
-    image: '/product-screens/prospect-portal.png',
-    capabilities: [],
-    proof: ['Higher education workflows', 'Admissions, registrar, and records operations', 'Built on the broader Crtfy platform'],
-    departments: ['Admissions and registrar', 'Records and compliance', 'IT and security'],
-    outcomes: ['Faster transcript and record review', 'More trusted student record workflows', 'Stronger coordination across teams'],
-  },
+
 ]
 
 export const managedServices = [

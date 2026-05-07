@@ -189,9 +189,8 @@ function Footer() {
           <div className="footer-links">
             <NavLink to="/products/evaluate">Evaluate</NavLink>
             <NavLink to="/products/verify">Verify</NavLink>
-            <NavLink to="/products/certify">Certify</NavLink>
             <NavLink to="/products/crtfy-student">Crtfy Student</NavLink>
-            <NavLink to="/product/command-center">Product view</NavLink>
+            {/* <NavLink to="/product/command-center">Product view</NavLink> */}
           </div>
         </div>
       </div>
@@ -222,13 +221,14 @@ export default function App() {
       />
       <Route element={<MarketingLayout />}>
         <Route path="/" element={<HomePage />} />
+        <Route path="/products/crtfy-student" element={<StudentPage />} />
         <Route path="/products" element={<ProductsPage />} />
         <Route path="/products/evaluate" element={<OfferingPage offering={offeringLookup.evaluate} />} />
         <Route path="/products/verify" element={<OfferingPage offering={offeringLookup.verify} />} />
-        <Route path="/products/certify" element={<OfferingPage offering={offeringLookup.certify} />} />
+        
         <Route path="/products/engage" element={<OfferingPage offering={offeringLookup.engage} />} />
         <Route path="/products/insight" element={<OfferingPage offering={offeringLookup.insight} />} />
-        <Route path="/products/crtfy-student" element={<StudentPage />} />
+        
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/services/secure" element={<OfferingPage offering={offeringLookup.secure} />} />
         <Route path="/services/govern" element={<OfferingPage offering={offeringLookup.govern} />} />

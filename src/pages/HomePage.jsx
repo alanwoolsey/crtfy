@@ -19,7 +19,7 @@ export default function HomePage() {
               <Link to="/services" className="button button-secondary">Explore services</Link>
             </div>
             <div className="hero-proof-grid">
-              <div>Evaluate, Verify, Certify, Engage, Insight</div>
+              <div>Evaluate, Verify, Engage, Insight</div>
               <div>Secure, Govern, Operate</div>
               <div>Advisory, Compliance, Risk</div>
               <div>Connect, Orchestrate, Protect</div>
