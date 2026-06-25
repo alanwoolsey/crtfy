@@ -12,8 +12,8 @@ export default function OfferingPage({ offering }) {
             <OfferingLockup slug={offering.slug} name={offering.shortTitle} />
             <p className="lead-copy">{offering.description}</p>
             <div className="hero-actions">
-              <Link className="button button-primary" to="/platform">See platform</Link>
-              <Link className="button button-secondary" to="/industries">See industries</Link>
+              <Link className="button button-primary" to="/products">Compare products</Link>
+              <Link className="button button-secondary" to="/about">About Crtfy</Link>
             </div>
             <div className="hero-proof-grid">
               {offering.proof.map((item) => (
@@ -31,8 +31,8 @@ export default function OfferingPage({ offering }) {
         <div className="container">
           <SectionIntro
             eyebrow="What it covers"
-            title={`How Crtfy delivers ${offering.shortTitle.toLowerCase()} without another point solution.`}
-            description="Each capability can operate independently and connect cleanly into the larger Crtfy platform."
+            title={`How ${offering.shortTitle} supports daily work.`}
+            description="Each capability is designed around practical operating workflows, clear ownership, and reviewable evidence."
           />
           <div className="feature-grid three-up">
             {offering.capabilities.map((capability) => (
@@ -47,8 +47,8 @@ export default function OfferingPage({ offering }) {
           <div>
             <SectionIntro
               eyebrow="Where it fits"
-              title="Designed for the teams closest to this workflow."
-              description="These groups typically see the fastest value from this capability while staying connected to the broader operating environment."
+              title="Designed for the teams closest to the workflow."
+              description="These teams typically see the fastest value because the product maps to how the work already moves."
             />
             <div className="workflow-list">
               {offering.departments.map((department, index) => (
@@ -62,13 +62,13 @@ export default function OfferingPage({ offering }) {
           <div className="story-panel">
             <MiniQuote
               quote="We need a clearer way to connect evidence, policy, and action across the environment."
-              source="Common SLED operating challenge"
+              source="Common operational challenge"
             />
             <div className="callout-card">
               <span className="eyebrow">Why it matters</span>
-              <h3>{offering.shortTitle} becomes stronger inside the unified platform.</h3>
+              <h3>{offering.shortTitle} is built to keep work accountable.</h3>
               <p>
-                Connect this capability to encryption, compliance evidence, cyber operations, and broader workflow controls as your environment matures.
+                The product pairs operational speed with governance patterns such as source evidence, review queues, permissions, audit history, and human approval.
               </p>
             </div>
           </div>
@@ -79,12 +79,12 @@ export default function OfferingPage({ offering }) {
         <div className="container">
           <CTASection
             eyebrow={offering.eyebrow}
-            title={`Talk through how ${offering.shortTitle.toLowerCase()} fits into your environment.`}
-            description="Start with the workflow in front of you, then map the related teams, controls, and systems around it."
+            title={`Talk through how ${offering.shortTitle} fits into your environment.`}
+            description="Start with the workflow in front of you, then map the related teams, controls, records, and systems around it."
             primaryLabel="Request a working session"
             primaryTo="#contact"
-            secondaryLabel="Explore platform"
-            secondaryTo="/platform"
+            secondaryLabel="Compare products"
+            secondaryTo="/products"
           />
         </div>
       </section>

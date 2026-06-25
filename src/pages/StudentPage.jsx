@@ -4,16 +4,16 @@ import { CTASection, FeatureCard, SectionIntro, StatStrip } from '../components/
 import OfferingLockup from '../components/OfferingLockup'
 
 const productStats = [
-  { value: 'Higher education', label: 'Built for transcript, records, admissions, and student workflow operations.' },
-  { value: 'Secure records', label: 'Combines document trust, evaluation, and guided next steps around sensitive student data.' },
-  { value: 'Connected platform', label: 'Links student workflows to compliance, governance, and protected data operations.' },
+  { value: 'Today\'s Work', label: 'Prioritize students who need action, are close to completion, ready for decision, or blocked by exceptions.' },
+  { value: 'Student 360', label: 'Keep student context, checklist progress, transcripts, decisions, trust posture, and handoff in one workspace.' },
+  { value: 'Decision ready', label: 'Coordinate evidence, recommendations, trust signals, reviewer notes, and release workflows.' },
 ]
 
 const productFeatures = [
   {
     icon: FileCheck2,
     title: 'Document trust in the workflow',
-    description: 'Use the same platform to parse records, protect sensitive data, flag anomalies, and create an audit trail.',
+    description: 'Parse records, protect sensitive data, flag anomalies, and create an audit trail inside the student workflow.',
     bullets: ['OCR and classification', 'Fraud and exception checks', 'Protected storage'],
   },
   {
@@ -36,8 +36,8 @@ const productFeatures = [
   },
   {
     icon: ClipboardList,
-    title: 'Connected platform workflows',
-    description: 'Crtfy Student connects into document security, AI governance, encryption, and broader operational controls.',
+    title: 'Connected student workflows',
+    description: 'Connect transcript work, document queues, trust review, and decision ownership across the student lifecycle.',
     bullets: ['Compliance handoff', 'Shared policy controls', 'Cross-team coordination'],
   },
 ]
@@ -51,11 +51,11 @@ export default function StudentPage() {
             <span className="eyebrow">Product Offering</span>
             <OfferingLockup slug="crtfy-student" name="Student" className="page-brand-logo" />
             <p className="lead-copy">
-              Crtfy Student brings document trust, workflow, compliance, and guided experiences together for higher education teams managing sensitive student records.
+              Crtfy Student is an enrollment operating system for the work admissions and records teams need to move now: incomplete applications, transcripts, decisions, trust cases, yield, and handoff.
             </p>
             <div className="hero-actions">
               <Link to="/product/prospect-portal" className="button button-primary">Open product view</Link>
-              <a href="#capabilities" className="button button-secondary">See how it fits the platform</a>
+              <a href="#capabilities" className="button button-secondary">See capabilities</a>
             </div>
           </div>
           <div className="product-panel visual-panel">
@@ -74,8 +74,8 @@ export default function StudentPage() {
         <div className="container">
           <SectionIntro
             eyebrow="Capabilities"
-            title="A higher education offering built on the broader Crtfy platform."
-            description="Use Crtfy Student to coordinate transcript intake, document trust, review workflows, and student-facing next steps."
+            title="A daily operating surface for enrollment teams."
+            description="Use Crtfy Student to coordinate transcript upload, document queues, checklist blockers, student readiness, trust review, and decision workflows."
           />
           <div className="feature-grid three-up">
             {productFeatures.map((feature) => (
@@ -90,14 +90,14 @@ export default function StudentPage() {
           <div>
             <SectionIntro
               eyebrow="Where it fits"
-              title="Designed for records, admissions, compliance, and IT teams working together."
-              description="Crtfy Student supports higher education workflows that depend on trusted records, explainable review, and clear next steps."
+              title="Designed for the teams moving students from interest to enrollment."
+              description="Crtfy Student supports workflows that depend on trusted records, explainable decisions, clear next actions, and coordinated ownership."
             />
             <div className="workflow-list">
               <div><strong>1. Registrar / Admissions</strong><span>Lead with transcript intake, document trust, and early workflow speed.</span></div>
-              <div><strong>2. Records / Compliance</strong><span>Extend into audit trails, redaction, policy controls, and data handling.</span></div>
-              <div><strong>3. IT / Security</strong><span>Connect the product to encryption, cyber operations, and broader governance.</span></div>
-              <div><strong>4. Connected workflows</strong><span>Extend the same controls and workflow logic into other records-heavy or compliance-heavy environments.</span></div>
+              <div><strong>2. Records / Compliance</strong><span>Track document status, trust cases, review evidence, and auditable updates.</span></div>
+              <div><strong>3. Enrollment Leaders</strong><span>Understand bottlenecks, readiness, decision flow, yield signals, and melt risk.</span></div>
+              <div><strong>4. IT / Systems</strong><span>Connect student workflows to source systems, document intake, and governed access.</span></div>
             </div>
           </div>
           <div className="image-panel mock-right-panel">
@@ -115,12 +115,13 @@ export default function StudentPage() {
       <section className="section-block">
         <div className="container">
           <CTASection
-            title="See how Crtfy Student connects into the broader platform."
-            description="Explore the products and services that support student records, secure operations, governance, and compliance."
-            primaryLabel="See the platform"
-            primaryTo="/platform"
-            secondaryLabel="See Verify"
-            secondaryTo="/products/verify"
+            eyebrow="Product fit"
+            title="See how Crtfy Student fits with the rest of the portfolio."
+            description="Compare Crtfy Student with Crtfy.ai and Crtfy Documents to understand the right starting point for your team."
+            primaryLabel="Compare products"
+            primaryTo="/products"
+            secondaryLabel="About Crtfy"
+            secondaryTo="/about"
           />
         </div>
       </section>

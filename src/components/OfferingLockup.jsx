@@ -11,7 +11,9 @@ const logoBySlug = {
   advisory: '/crtfyadvisory.png',
   compliance: '/crtfycompliance.png',
   risk: '/crtfyrisk.png',
+  'crtfy-ai': '/crtfy-ai-logo.png',
   'crtfy-student': '/crtfystudent.png',
+  'crtfy-documents': '/crtfy-documents-logo.png',
 }
 
 export default function OfferingLockup({ slug, name, className = '' }) {
@@ -21,7 +23,7 @@ export default function OfferingLockup({ slug, name, className = '' }) {
   if (logoSrc) {
     return (
       <div className={classes}>
-        <img className="offering-lockup-image" src={logoSrc} alt={`Crtfy ${name}`} />
+        <img className="offering-lockup-image" src={logoSrc} alt={name} />
       </div>
     )
   }

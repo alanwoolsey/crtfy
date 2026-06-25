@@ -1,5 +1,8 @@
+import { Link } from 'react-router-dom'
+import { ArrowRight } from 'lucide-react'
 import { CTASection, SectionIntro } from '../components/SiteComponents'
 import { pathwaySteps, productCards } from '../data/siteData'
+import OfferingLockup from '../components/OfferingLockup'
 
 export default function ProductsPage() {
   return (
@@ -7,28 +10,31 @@ export default function ProductsPage() {
       <section className="page-hero">
         <div className="container narrow-hero">
           <span className="eyebrow">Products</span>
-          <h1>Software products for evaluation, trust, compliance, engagement, analytics, and industry workflows.</h1>
+          <h1>The Crtfy SaaS portfolio.</h1>
           <p className="lead-copy centered-copy">
-            Each product addresses a clear operational need and connects into the broader Crtfy platform.
+            Three Education-First products for governed AI, student lifecycle operations, and intelligent document management.
           </p>
         </div>
       </section>
 
       <section className="section-block">
         <div className="container">
-          <SectionIntro
-            eyebrow="Core software"
-            title="Products built for evaluation, trust, compliance, engagement, analytics, and industry-specific delivery."
-            description="Explore the applications that support sensitive records, governed decisions, communication, and operational visibility."
-          />
-          <div className="feature-grid three-up">
+          <div className="product-comparison-grid">
             {productCards.map((product) => (
-              <article key={product.slug} className="feature-card offering-link-card">
-                <img className="offering-card-image" src={product.image} alt={`${product.title} screenshot`} />
+              <article key={product.slug} className="feature-card offering-link-card product-comparison-card">
+                <img className="offering-card-image" src={product.image} alt={`${product.title} dashboard screenshot`} />
                 <div className="feature-icon"><product.icon size={22} /></div>
-                <h3>{product.title}</h3>
+                <span className="eyebrow eyebrow-inline">{product.eyebrow}</span>
+                <OfferingLockup slug={product.slug} name={product.title} className="product-card-logo" />
                 <p>{product.description}</p>
-                <a className="inline-link" href={product.to}>Open product</a>
+                <div className="feature-bullets">
+                  {product.proof.map((item) => (
+                    <span key={item}>{item}</span>
+                  ))}
+                </div>
+                <Link className="inline-link" to={product.to}>
+                  Open product <ArrowRight size={16} />
+                </Link>
               </article>
             ))}
           </div>
@@ -38,9 +44,9 @@ export default function ProductsPage() {
       <section className="section-block alt-surface">
         <div className="container">
           <SectionIntro
-            eyebrow="How teams adopt"
-            title="Organizations often begin with one workflow and then connect adjacent capabilities."
-            description="Crtfy products are designed to solve a focused problem today and fit naturally into a broader operating environment over time."
+            eyebrow="How customers adopt"
+            title="Start with one operating surface, then connect adjacent workflows."
+            description="The products are focused enough to deploy around a clear need and broad enough to support the next workflow when the customer is ready."
           />
           <div className="path-grid">
             {pathwaySteps.map((step) => (
@@ -56,12 +62,13 @@ export default function ProductsPage() {
       <section className="section-block">
         <div className="container">
           <CTASection
-            title="Start with the product that solves the most urgent problem first."
-            description="Then connect services, governance, and platform infrastructure as your needs expand."
-            primaryLabel="See services"
-            primaryTo="/services"
-            secondaryLabel="See platform"
-            secondaryTo="/platform"
+            eyebrow="Product fit"
+            title="Find the right Crtfy starting point."
+            description="We can help map whether Crtfy.ai, Crtfy Student, or Crtfy Documents is the best first product for your team."
+            primaryLabel="Talk to Crtfy"
+            primaryTo="#contact"
+            secondaryLabel="About Crtfy"
+            secondaryTo="/about"
           />
         </div>
       </section>

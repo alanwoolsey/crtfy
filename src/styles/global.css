@@ -93,6 +93,19 @@ button { font: inherit; }
   height: auto;
 }
 
+.product-card-logo {
+  margin: 2px 0 16px;
+  min-height: 68px;
+  align-items: center;
+}
+
+.product-card-logo .offering-lockup-image {
+  width: min(230px, 100%);
+  max-height: 70px;
+  object-fit: contain;
+  object-position: left center;
+}
+
 .offering-lockup-name {
   font-size: clamp(2.4rem, 4.4vw, 4.6rem);
   line-height: 0.94;
@@ -639,6 +652,7 @@ button { font: inherit; }
 .suite-grid,
 .feature-grid,
 .link-card-grid,
+.product-comparison-grid,
 .architecture-grid,
 .walkthrough-grid,
 .comparison-grid { display: grid; gap: 18px; }
@@ -647,6 +661,7 @@ button { font: inherit; }
 .feature-grid.four-up { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .feature-grid.three-up,
 .link-card-grid,
+.product-comparison-grid,
 .architecture-grid,
 .walkthrough-grid,
 .comparison-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -657,6 +672,21 @@ button { font: inherit; }
 .comparison-card,
 .case-card,
 .link-card { padding: 22px; }
+.product-feature-card,
+.product-comparison-card {
+  display: flex;
+  flex-direction: column;
+}
+.product-comparison-card h2 {
+  margin: 0 0 10px;
+  font-size: clamp(1.45rem, 2vw, 2rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+.product-comparison-card .inline-link,
+.product-feature-card .inline-link {
+  margin-top: auto;
+}
 .suite-card-screen {
   overflow: hidden;
 }
@@ -1520,6 +1550,7 @@ th {
   .comparison-grid,
   .architecture-grid,
   .link-card-grid,
+  .product-comparison-grid,
   .feature-grid.four-up,
   .feature-grid.three-up,
   .suite-grid,
@@ -1543,6 +1574,7 @@ th {
   .comparison-grid,
   .architecture-grid,
   .link-card-grid,
+  .product-comparison-grid,
   .feature-grid.four-up,
   .feature-grid.three-up,
   .suite-grid,

@@ -7,9 +7,9 @@ export default function ResourcesPage() {
       <section className="page-hero page-hero-resources">
         <div className="container narrow-hero">
           <span className="eyebrow">Resources</span>
-          <h1>Resources for teams evaluating secure operations, compliance, and connected workflows.</h1>
+          <h1>Resources for teams evaluating the Crtfy SaaS portfolio.</h1>
           <p className="lead-copy centered-copy">
-            Explore how Crtfy supports evaluation, verification, compliance, governance, and protected data operations across regulated environments.
+            A short guide to the products, where each one fits, and how customers can start with the workflow that matters most.
           </p>
         </div>
       </section>
@@ -18,8 +18,8 @@ export default function ResourcesPage() {
         <div className="container">
           <SectionIntro
             eyebrow="Resource overview"
-            title="A concise view of what Crtfy covers and how the platform fits together."
-            description="These summaries highlight the platform, the problem it solves, and the capabilities organizations can bring together over time."
+            title="A concise view of what Crtfy covers."
+            description="These summaries highlight the portfolio, the customer problems it solves, and the way products can connect over time."
           />
           <div className="link-card-grid">
             {resourceCards.map((card) => (
@@ -35,12 +35,13 @@ export default function ResourcesPage() {
       <section className="section-block">
         <div className="container">
           <CTASection
-            title="Explore the products and services behind the platform."
-            description="Start with the area that matters most to your team and see how it connects to the broader Crtfy environment."
+            eyebrow="Resources"
+            title="Explore the product that matches the current workflow."
+            description="Start with governed AI, student operations, or document management, then map the adjacent records and review flows."
             primaryLabel="See products"
             primaryTo="/products"
-            secondaryLabel="See services"
-            secondaryTo="/services"
+            secondaryLabel="About Crtfy"
+            secondaryTo="/about"
           />
         </div>
       </section>

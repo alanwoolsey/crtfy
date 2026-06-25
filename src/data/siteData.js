@@ -17,162 +17,106 @@ import {
 
 export const primaryNav = [
   { to: '/products', label: 'Products' },
-  { to: '/services', label: 'Services' },
-  { to: '/platform', label: 'Platform' },
-  { to: '/industries', label: 'Industries' },
+  { to: '/about', label: 'About' },
   { to: '/resources', label: 'Resources' },
 ]
 
-export const positioningLine = 'Crtfy delivers certified outcomes across data, AI, and operations through software, services, and compliance.'
+export const positioningLine = 'Crtfy builds governed SaaS workspaces for AI operations, student lifecycle workflows, and education-first document management.'
 
 export const homeStats = [
-  { value: 'Software products', label: 'Focused applications for evaluation, trust, compliance, engagement, and analytics.' },
-  { value: 'Managed services', label: 'Ongoing support for security operations, governance, and platform performance.' },
-  { value: 'Advisory + compliance', label: 'Strategic guidance, audit readiness, and risk programs for regulated environments.' },
-  { value: 'Platform infrastructure', label: 'Integrations, orchestration, and protection that connect the full environment.' },
+  { value: 'Products', label: 'Purpose-built Education applications for governed AI, enrollment operations, and institutional document workflows.' },
+  { value: 'Education-first', label: 'Designed around admissions, registrar, records, compliance, and campus operations teams.' },
+  { value: 'Governed AI', label: 'AI assistance is tied to roles, sources, permissions, citations, policies, and review workflows.' },
+  { value: 'Intelligent Content Management', label: 'Queues, tasks, approvals, routing, audit history, and integrations are core product patterns.' },
 ]
 
 export const problemCards = [
   {
-    icon: Bot,
-    title: 'Operational sprawl creates coverage gaps',
-    description: 'Teams often manage separate tools for records, AI, compliance, and security, which makes it harder to coordinate the full outcome.',
+    icon: Blocks,
+    title: 'Campus work is split across disconnected tools',
+    description: 'Shared drives, inboxes, spreadsheets, CRMs, and generic document systems make it difficult to see status, ownership, and evidence.',
   },
   {
     icon: ShieldCheck,
-    title: 'Compliance pressure keeps rising',
-    description: 'FERPA, CJIS, HIPAA, CMMC, and state-level privacy obligations demand stronger evidence, clearer controls, and better operating discipline.',
+    title: 'Sensitive records need defensible handling',
+    description: 'Student data, institutional records, decisions, document access, AI use, and retention all need clear controls and auditability.',
   },
   {
-    icon: Radar,
-    title: 'AI, data, and operations are converging fast',
-    description: 'Teams are adopting AI and automation faster than governance, security, and workflow ownership can keep up.',
+    icon: Bot,
+    title: 'AI needs an operating model',
+    description: 'Teams want AI support, but production use requires guardrails, review, source grounding, prompt controls, and role-aware access.',
   },
 ]
 
 export const categoryCards = [
   {
-    title: 'Core Software Products',
-    description: 'Applications for evaluation, trust, compliance, engagement, analytics, and industry-specific workflows.',
+    title: 'Governed AI workspace',
+    description: 'Crtfy.ai gives teams a controlled place to use prompts, knowledge, workflows, role twins, and review guardrails.',
   },
   {
-    title: 'Managed Services',
-    description: 'Operational coverage for security, governance, and ongoing optimization once the platform is in motion.',
+    title: 'Student operating system',
+    description: 'Crtfy Student helps admissions and enrollment teams prioritize today\'s work, student records, decisions, trust, and yield.',
   },
   {
-    title: 'Advisory + Compliance',
-    description: 'High-trust services that turn complex regulations, modernization plans, and risk questions into executable programs.',
-  },
-  {
-    title: 'Infrastructure + Integrations',
-    description: 'The layers that connect systems, automate workflows, and protect sensitive data.',
+    title: 'Document operations',
+    description: 'Crtfy Documents manages intake, repository workflows, e-forms, signatures, governance, retention, and governed search.',
   },
 ]
 
 export const productOfferings = [
-    {
+  {
+    slug: 'crtfy-ai',
+    to: '/products/crtfy-ai',
+    eyebrow: 'Governed AI Workspace',
+    title: 'Crtfy.ai',
+    shortTitle: 'Crtfy.ai',
+    icon: Bot,
+    description: 'A governed AI workspace for teams that need useful AI without losing control of prompts, knowledge, roles, review, and policy.',
+    image: '/product-screens/command-center.png',
+    proof: ['Prompt and output governance', 'Knowledge-connected workflows', 'Role-aware AI workspaces'],
+    capabilities: [
+      { icon: Bot, title: 'AI workspace', description: 'Give teams a governed place to launch work, reuse prompts, and connect knowledge sources.', bullets: ['Prompt library', 'Knowledge sources', 'Team workspaces'] },
+      { icon: ShieldCheck, title: 'Guardrails and review', description: 'Control how AI is used with policies, reviewer queues, citations, and activity history.', bullets: ['Policy controls', 'Pending reviews', 'AI activity logs'] },
+      { icon: Workflow, title: 'Workflow-ready AI', description: 'Connect AI assistance to repeatable work instead of one-off chat sessions.', bullets: ['Open workflows', 'Role twins', 'Template builder'] },
+    ],
+    departments: ['Operations teams', 'Knowledge owners', 'Compliance and leadership'],
+    outcomes: ['Move common work into governed AI flows', 'Keep AI answers tied to approved sources', 'Review usage before it creates unmanaged risk'],
+  },
+  {
     slug: 'crtfy-student',
     to: '/products/crtfy-student',
-    eyebrow: 'Industry Product',
+    eyebrow: 'Enrollment Operating System',
     title: 'Crtfy Student',
     shortTitle: 'Crtfy Student',
     icon: GraduationCap,
-    description: 'A higher-ed product offering that combines evaluation, verification, certification, and guided engagement around student records.',
-    image: '/product-screens/prospect-portal.png',
-    capabilities: [],
-    proof: ['Higher education workflows', 'Admissions, registrar, and records operations', 'Built on the broader Crtfy platform'],
-    departments: ['Admissions and registrar', 'Records and compliance', 'IT and security'],
-    outcomes: ['Faster transcript and record review', 'More trusted student record workflows', 'Stronger coordination across teams'],
+    description: 'An enrollment and student-records operating system for prioritizing today\'s work, document queues, decisions, trust, yield, and handoff.',
+    image: '/product-screens/student-360.png',
+    proof: ['Today\'s Work orchestration', 'Student 360 records', 'Decision and trust workflows'],
+    capabilities: [
+      { icon: LayoutDashboard, title: 'Today\'s Work', description: 'Prioritize the students and work items that staff can move now.', bullets: ['Needs attention', 'Close to completion', 'Ready for decision'] },
+      { icon: GraduationCap, title: 'Student 360', description: 'View student context, checklist progress, transcripts, decisions, trust posture, and handoff state.', bullets: ['Student record view', 'Checklist progress', 'Transcript context'] },
+      { icon: BadgeCheck, title: 'Decision workflows', description: 'Support review packets, recommendations, evidence, trust signals, and human approval.', bullets: ['Decision Studio', 'Trust Center', 'Yield and melt queues'] },
+    ],
+    departments: ['Admissions counselors', 'Registrar and records teams', 'Enrollment leaders'],
+    outcomes: ['Focus staff on students who can move now', 'Coordinate records, trust, and decision work', 'Improve conversion visibility from admit to enrollment'],
   },
   {
-    slug: 'evaluate',
-    to: '/products/evaluate',
-    eyebrow: 'Core Product',
-    title: 'Crtfy Evaluate',
-    shortTitle: 'Evaluate',
-    icon: GraduationCap,
-    description: 'Academic and credential evaluation for transcripts, transfer credit, program fit, and structured review workflows.',
-    image: '/product-screens/student-profile.png',
-    proof: ['Transcript and credential evaluation', 'Transfer credit and program fit', 'Structured review workflows'],
+    slug: 'crtfy-documents',
+    to: '/products/crtfy-documents',
+    eyebrow: 'Document Operations',
+    title: 'Crtfy Documents',
+    shortTitle: 'Crtfy Documents',
+    icon: FileStack,
+    description: 'An education-first document management and workflow platform for institutional records, intake, queues, e-forms, packets, retention, and governed AI search.',
+    image: '/product-screens/decision-studio.png',
+    proof: ['Education-first content management', 'Document intake and review queues', 'Retention, audit, and governed AI search'],
     capabilities: [
-      { icon: SearchCheck, title: 'Credential interpretation', description: 'Turn unstructured academic records into usable evaluation data.', bullets: ['Transcript parsing', 'Course normalization', 'Program mapping'] },
-      { icon: GraduationCap, title: 'Transfer and fit modeling', description: 'Show likely fit, credit applicability, and readiness before manual teams lose time.', bullets: ['Transfer credit views', 'Program fit signals', 'Gap visibility'] },
-      { icon: BadgeCheck, title: 'Defensible evaluation output', description: 'Keep every result tied to evidence, logic, and reviewer actions.', bullets: ['Audit trails', 'Evidence-backed decisions', 'Repeatable workflows'] },
+      { icon: FileStack, title: 'Repository and intake', description: 'Store documents with metadata, person links, audit events, versions, preview, and secure access.', bullets: ['Document repository', 'Staff and portal intake', 'Metadata capture'] },
+      { icon: Workflow, title: 'Queues and workflows', description: 'Turn uploaded files, forms, and approvals into actionable work for departments.', bullets: ['Review queues', 'Workflow automation', 'E-forms and signatures'] },
+      { icon: ShieldCheck, title: 'Governance and AI search', description: 'Manage retention, legal holds, disposition, audit, and source-grounded AI assistance.', bullets: ['Retention policies', 'Legal hold', 'Governed search'] },
     ],
-    departments: ['Admissions and registrar', 'Records and compliance', 'Program evaluators'],
-    outcomes: ['Faster evaluation throughput', 'More consistent decisions', 'Cleaner evidence for downstream review'],
-  },
-  {
-    slug: 'verify',
-    to: '/products/verify',
-    eyebrow: 'Core Product',
-    title: 'Crtfy Verify',
-    shortTitle: 'Verify',
-    icon: ShieldCheck,
-    description: 'Fraud detection and document trust for transcripts, IDs, records, and AI-driven anomaly detection.',
-    image: '/product-screens/student-profile.png',
-    proof: ['Document trust and fraud detection', 'Record and ID anomaly analysis', 'Secure evidence and redaction'],
-    capabilities: [
-      { icon: ShieldCheck, title: 'Fraud and anomaly detection', description: 'Identify altered files, issuer mismatches, suspicious metadata, and AI-driven anomalies.', bullets: ['Document fraud checks', 'AI anomaly detection', 'Exception queues'] },
-      { icon: FileStack, title: 'Records intake and classification', description: 'Bring structured OCR and document typing into the trust workflow.', bullets: ['OCR and classification', 'Metadata extraction', 'Routing and tagging'] },
-      { icon: LockKeyhole, title: 'Protected evidence handling', description: 'Preserve provenance, redact sensitive data, and keep a defensible chain of custody.', bullets: ['Redaction controls', 'Audit history', 'Secure storage'] },
-    ],
-    departments: ['Records and intake teams', 'Compliance office', 'Public-sector document review teams'],
-    outcomes: ['Lower fraud exposure', 'Fewer manual checks', 'A clean trust layer for sensitive workflows'],
-  },
-  // {
-  //   slug: 'certify',
-  //   to: '/products/certify',
-  //   eyebrow: 'Core Product',
-  //   title: 'Crtfy Certify',
-  //   shortTitle: 'Certify',
-  //   icon: BadgeCheck,
-  //   description: 'Decision and compliance engine for audit trails, explainability, human review, and regulatory alignment.',
-  //   image: '/product-screens/decision-studio.png',
-  //   proof: ['Audit trails and explainability', 'Regulatory alignment', 'Human review and approval'],
-  //   capabilities: [
-  //     { icon: BadgeCheck, title: 'Explainable decisions', description: 'Make outcomes readable, reviewable, and tied to the evidence that supports them.', bullets: ['Decision packets', 'Evidence panels', 'Human rationale'] },
-  //     { icon: Workflow, title: 'Approval and exception flow', description: 'Bring compliance logic, release controls, and oversight into the same operating surface.', bullets: ['Approval paths', 'Exception handling', 'Release workflows'] },
-  //     { icon: ShieldCheck, title: 'Regulatory alignment', description: 'Keep operational decisions aligned with the frameworks and policies teams must defend.', bullets: ['Policy mapping', 'Audit readiness', 'Evidence retention'] },
-  //   ],
-  //   departments: ['Compliance and audit', 'Operations leaders', 'Program owners'],
-  //   outcomes: ['Stronger compliance posture', 'More defensible decisions', 'Less friction during audits'],
-  // },
-  {
-    slug: 'engage',
-    to: '/products/engage',
-    eyebrow: 'Core Product',
-    title: 'Crtfy Engage',
-    shortTitle: 'Engage',
-    icon: MessageSquareMore,
-    description: 'Engagement layer for student or citizen messaging, journeys, and AI-assisted interactions tied to real workflows.',
-    image: '/product-screens/prospect-portal.png',
-    proof: ['Journeys and messaging', 'AI-assisted interactions', 'Workflow-aware engagement'],
-    capabilities: [
-      { icon: MessageSquareMore, title: 'Guided interactions', description: 'Support messaging and journeys that respond to the real status of the person, file, or workflow.', bullets: ['Outbound messaging', 'Journey logic', 'Workflow triggers'] },
-      { icon: Bot, title: 'AI interaction controls', description: 'Use AI in engagement while preserving compliance guardrails and oversight.', bullets: ['AI response controls', 'Human escalation', 'Prompt logging'] },
-      { icon: Workflow, title: 'Connected next steps', description: 'Tie the engagement layer to decisions, records, and operational queues.', bullets: ['Case-aware outreach', 'Triggered next actions', 'Cross-system state updates'] },
-    ],
-    departments: ['Enrollment and service teams', 'Citizen service programs', 'Operations and outreach leaders'],
-    outcomes: ['Clearer next steps', 'Better conversion and response rates', 'Less disconnected communication'],
-  },
-  {
-    slug: 'insight',
-    to: '/products/insight',
-    eyebrow: 'Core Product',
-    title: 'Crtfy Insight',
-    shortTitle: 'Insight',
-    icon: Radar,
-    description: 'Analytics and prediction layer for forecasting, risk detection, funnel intelligence, and operational visibility.',
-    image: '/product-screens/command-center.png',
-    proof: ['Forecasting and prediction', 'Risk detection', 'Funnel and operational intelligence'],
-    capabilities: [
-      { icon: Radar, title: 'Predictive analysis', description: 'Spot risk, readiness, and likely outcomes earlier in the workflow.', bullets: ['Forecasting', 'Risk scoring', 'Readiness signals'] },
-      { icon: LayoutDashboard, title: 'Operational visibility', description: 'Give leaders one place to see throughput, bottlenecks, and exception patterns.', bullets: ['Dashboards', 'Alerts', 'Trend views'] },
-      { icon: SearchCheck, title: 'Decision intelligence', description: 'Connect analytics back to the systems, records, and actions driving the signal.', bullets: ['Source traceability', 'Performance insights', 'Actionable metrics'] },
-    ],
-    departments: ['Operations leadership', 'Enrollment analytics', 'Agency program managers'],
-    outcomes: ['Earlier risk visibility', 'Better resource allocation', 'Clearer operating decisions'],
+    departments: ['Records managers', 'Department staff and reviewers', 'IT and implementation teams'],
+    outcomes: ['Replace shared drives and email routing', 'Govern the full document lifecycle', 'Keep search and AI assistance tied to source records'],
   },
 
 ]
@@ -361,20 +305,20 @@ export const platformCards = platformOfferings
 
 export const marketDrivers = [
   {
-    title: 'AI is moving faster than policy',
-    description: 'Many SLED organizations are experimenting with AI, but formal governance, data lineage, and usage controls are still immature.',
+    title: 'AI adoption needs source-grounded controls',
+    description: 'Institutions need useful AI that respects roles, permissions, citations, review paths, and policy boundaries.',
   },
   {
-    title: 'Cybersecurity spend is non-discretionary',
-    description: 'Ransomware, infrastructure risk, and federal scrutiny keep cyber and resilience budgets active even when other spending slows.',
+    title: 'Enrollment teams need a daily operating system',
+    description: 'Staff need to know which students can move now, which blockers matter, and where trust or decision work is stuck.',
   },
   {
-    title: 'Compliance complexity keeps expanding',
-    description: 'Education, public safety, and health-oriented programs are simultaneously navigating FERPA, CJIS, HIPAA, state privacy rules, and grant conditions.',
+    title: 'Document work is still too manual',
+    description: 'Schools still rely on email, PDFs, shared drives, and generic ECM tools that do not match campus workflows.',
   },
   {
-    title: 'Operational fragmentation is expensive',
-    description: 'Teams are still buying tools in silos even though risk, compliance, data, and operations are increasingly intertwined.',
+    title: 'Auditability is becoming a product requirement',
+    description: 'Modern workflows need evidence, retention, access history, AI activity logging, and human approval built in.',
   },
 ]
 
@@ -402,31 +346,31 @@ export const partnerCards = [
 
 export const resourceCards = [
   {
-    title: 'Platform summary',
+    title: 'Product portfolio summary',
     description: positioningLine,
   },
   {
     title: 'What Crtfy covers',
-    description: 'A unified approach to evaluation, verification, compliance, engagement, analytics, governance, and protected operations.',
+    description: 'Governed AI workspaces, student lifecycle operations, and education-first document management.',
   },
   {
     title: 'How organizations start',
-    description: 'Many teams begin with a pressing workflow, compliance need, or trust issue and then connect adjacent capabilities over time.',
+    description: 'Most customers begin with one product surface and expand into adjacent workflows as their operating model matures.',
   },
 ]
 
 export const pathwaySteps = [
   {
-    title: 'Start with an immediate need',
-    description: 'Begin with the product or service that addresses the most urgent workflow, trust, or compliance challenge.',
+    title: 'Start with the daily workflow',
+    description: 'Begin where staff already feel the operational pain: AI governance, enrollment work queues, or document intake.',
   },
   {
-    title: 'Connect adjacent capabilities',
-    description: 'Add compliance, governance, security operations, or workflow layers as the environment becomes more connected.',
+    title: 'Connect records and evidence',
+    description: 'Tie work to documents, sources, decisions, activity history, and role-aware controls.',
   },
   {
-    title: 'Unify the environment',
-    description: 'Use Connect, Orchestrate, and Protect to bring systems, controls, and operations under one framework.',
+    title: 'Scale with governance',
+    description: 'Expand into workflows, integrations, policies, reporting, and AI assistance without losing accountability.',
   },
 ]
 
