@@ -12,7 +12,7 @@ export default function HomePage() {
         <div className="container hero-grid">
           <div className="hero-copy">
             <BrandLogo className="hero-brand-logo" />
-            <h2>Governed SaaS Education-Firstproducts for AI, students, and documents.</h2>
+            <h2>Governed SaaS Education-First products for AI, students, and documents.</h2>
             <p>
               Crtfy is focused applications for institutions that need operational AI, student lifecycle workflows, and education-first document management with governance built in.
             </p>
