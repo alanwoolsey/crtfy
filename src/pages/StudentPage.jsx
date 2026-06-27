@@ -30,7 +30,7 @@ export default function StudentPage() {
           <div>
             <span className="eyebrow">Admissions Operating System</span>
             <OfferingLockup slug="crtfy-student" name="Crtfy Student" className="page-brand-logo" />
-            <h1 className="product-hero-title">The admissions operating system for institutions that need more than a CRM.</h1>
+            <h2 className="product-hero-title">The admissions operating system for institutions that need more than a CRM.</h2>
             <p className="lead-copy">
               Replace disconnected admissions workflows with one governed workspace for recruitment, applications, transcript intake, student records, review queues, decisions, yield, and handoff.
             </p>
