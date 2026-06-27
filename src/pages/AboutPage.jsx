@@ -100,9 +100,9 @@ export default function AboutPage() {
         <div className="container">
           <CTASection
             eyebrow="Contact"
-            title="Talk with us about the product surface your team needs first."
-            description="We can map the immediate workflow, the required controls, and the adjacent product areas that should connect over time."
-            primaryLabel="Talk to Crtfy"
+            title="Request a demo for the product surface your team needs first."
+            description="Crtfy is sold and implemented through authorized partners. We can map the immediate workflow and connect your institution with the right team."
+            primaryLabel="Request a demo"
             primaryTo="#contact"
             secondaryLabel="View products"
             secondaryTo="/products"

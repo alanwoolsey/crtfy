@@ -77,7 +77,7 @@ export default function SledPage() {
           <CTASection
             title="See how Crtfy fits regulated SLED environments."
             description="Explore the products, services, and platform layers built for complex records, compliance, and operational workflows."
-            primaryLabel="Talk to Crtfy"
+            primaryLabel="Request a demo"
             primaryTo="#contact"
             secondaryLabel="Explore bundles"
             secondaryTo="/bundles"

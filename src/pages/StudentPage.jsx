@@ -35,7 +35,7 @@ export default function StudentPage() {
               Replace disconnected admissions workflows with one governed workspace for recruitment, applications, transcript intake, student records, review queues, decisions, yield, and handoff.
             </p>
             <div className="hero-actions">
-              <a href="#contact" className="button button-primary">Book a demo</a>
+              <a href="#contact" className="button button-primary">Request a demo</a>
               <a href="#capabilities" className="button button-secondary">See modules</a>
             </div>
           </div>
@@ -117,9 +117,9 @@ export default function StudentPage() {
             eyebrow="Admissions modernization"
             title="Replace fragmented admissions work with a governed enrollment operating system."
             description="Start with Today’s Work and Student 360, then connect transcript intelligence, Decision Studio, trust, yield, and handoff."
-            primaryLabel="Book a demo"
+            primaryLabel="Request a demo"
             primaryTo="#contact"
-            secondaryLabel="Compare products"
+            secondaryLabel="Explore platform"
             secondaryTo="/products"
           />
         </div>

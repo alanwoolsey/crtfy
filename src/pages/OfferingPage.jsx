@@ -53,7 +53,7 @@ export default function OfferingPage({ offering }) {
             <h1 className="product-hero-title">{story.headline}</h1>
             <p className="lead-copy">{story.body}</p>
             <div className="hero-actions">
-              <a className="button button-primary" href="#contact">Book a demo</a>
+              <a className="button button-primary" href="#contact">Request a demo</a>
               <a className="button button-secondary" href="#modules">See modules</a>
             </div>
             <div className="hero-proof-grid">
@@ -141,11 +141,11 @@ export default function OfferingPage({ offering }) {
         <div className="container">
           <CTASection
             eyebrow={offering.eyebrow}
-            title={`Talk through how ${offering.shortTitle} fits into your institution.`}
-            description="Start with the workflow in front of you, then map the related systems, records, controls, and teams around it."
-            primaryLabel="Book a demo"
+            title={`See how ${offering.shortTitle} fits into your institution.`}
+            description="Crtfy is sold and implemented through authorized partners. Request a demo and we will connect your institution with the right team."
+            primaryLabel="Request a demo"
             primaryTo="#contact"
-            secondaryLabel="Compare products"
+            secondaryLabel="Explore platform"
             secondaryTo="/products"
           />
         </div>

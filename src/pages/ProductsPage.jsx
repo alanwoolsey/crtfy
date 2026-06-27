@@ -57,11 +57,11 @@ export default function ProductsPage() {
           <CTASection
             eyebrow="Product fit"
             title="Find the right Crtfy starting point."
-            description="Most institutions should start with the workflow that already has budget pressure: admissions CRM replacement, governed AI adoption, or ECM modernization."
-            primaryLabel="Book a demo"
+            description="Most institutions should start with the workflow that already has budget pressure. Crtfy is sold and implemented through authorized partners, and we will connect your institution with the right team."
+            primaryLabel="Request a demo"
             primaryTo="#contact"
-            secondaryLabel="Start with Crtfy Student"
-            secondaryTo="/products/crtfy-student"
+            secondaryLabel="Find a partner"
+            secondaryTo="/partners"
           />
         </div>
       </section>

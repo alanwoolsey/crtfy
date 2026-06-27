@@ -10,9 +10,21 @@ import { allOfferings, primaryNav, productOfferings } from './data/siteData'
 import OfferingPage from './pages/OfferingPage'
 import ProductsPage from './pages/ProductsPage'
 import AboutPage from './pages/AboutPage'
+import PartnersPage from './pages/PartnersPage'
+import PartnerApplicationPage from './pages/PartnerApplicationPage'
 
 const offeringLookup = Object.fromEntries(allOfferings.map((offering) => [offering.slug, offering]))
 const productMenuItems = productOfferings
+
+function ScrollToTop() {
+  const { pathname, search } = useLocation()
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+  }, [pathname, search])
+
+  return null
+}
 
 function Topbar() {
   const location = useLocation()
@@ -57,7 +69,7 @@ function Topbar() {
 
         <div className="nav-actions">
           <NavLink to="/products" className="button button-secondary">See products</NavLink>
-          <a href="#contact" className="button button-primary">Talk to Crtfy</a>
+          <a href="#contact" className="button button-primary">Request a demo</a>
           <button
             className="mobile-menu-button"
             aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
@@ -102,7 +114,7 @@ function Topbar() {
 
           <div className="mobile-nav-actions">
             <NavLink to="/products" className="button button-secondary">See products</NavLink>
-            <a href="#contact" className="button button-primary">Talk to Crtfy</a>
+            <a href="#contact" className="button button-primary">Request a demo</a>
           </div>
         </div>
       ) : null}
@@ -122,7 +134,7 @@ function Footer() {
             </div>
           </div>
           <p className="footer-copy">
-            Crtfy helps institutions replace fragmented admissions CRMs, unmanaged AI tools, shared drives, and legacy ECM workflows with governed products built for education.
+            Crtfy is sold and implemented through authorized partners. Submit your information and we will connect your institution with the right team.
           </p>
         </div>
         <div>
@@ -130,6 +142,7 @@ function Footer() {
           <div className="footer-links">
             <NavLink to="/products">Products</NavLink>
             <NavLink to="/about">About</NavLink>
+            <NavLink to="/partners">Partners</NavLink>
           </div>
         </div>
         <div>
@@ -166,32 +179,37 @@ function MarketingLayout() {
 
 export default function App() {
   return (
-    <Routes>
-      <Route
-        path="/product/*"
-        element={(
-          <StudentRecordsProvider>
-            <ProductShell />
-          </StudentRecordsProvider>
-        )}
-      />
-      <Route element={<MarketingLayout />}>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/products/crtfy-ai" element={<OfferingPage offering={offeringLookup['crtfy-ai']} />} />
-        <Route path="/products/crtfy-student" element={<StudentPage />} />
-        <Route path="/products/crtfy-documents" element={<OfferingPage offering={offeringLookup['crtfy-documents']} />} />
-        <Route path="/products" element={<ProductsPage />} />
-        <Route path="/resources" element={<Navigate to="/products" replace />} />
-        <Route path="/demo" element={<ProductsPage />} />
-        <Route path="/student" element={<Navigate to="/products/crtfy-student" replace />} />
-        <Route path="/services/*" element={<Navigate to="/products" replace />} />
-        <Route path="/platform/*" element={<Navigate to="/products" replace />} />
-        <Route path="/industries" element={<Navigate to="/about" replace />} />
-        <Route path="/sled" element={<Navigate to="/about" replace />} />
-        <Route path="/why-crtfy" element={<Navigate to="/about" replace />} />
-        <Route path="/products/:legacy" element={<Navigate to="/products" replace />} />
-      </Route>
-    </Routes>
+    <>
+      <ScrollToTop />
+      <Routes>
+        <Route
+          path="/product/*"
+          element={(
+            <StudentRecordsProvider>
+              <ProductShell />
+            </StudentRecordsProvider>
+          )}
+        />
+        <Route element={<MarketingLayout />}>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/products/crtfy-ai" element={<OfferingPage offering={offeringLookup['crtfy-ai']} />} />
+          <Route path="/products/crtfy-student" element={<StudentPage />} />
+          <Route path="/products/crtfy-documents" element={<OfferingPage offering={offeringLookup['crtfy-documents']} />} />
+          <Route path="/products" element={<ProductsPage />} />
+          <Route path="/partners" element={<PartnersPage />} />
+          <Route path="/partners/become" element={<PartnerApplicationPage />} />
+          <Route path="/resources" element={<Navigate to="/products" replace />} />
+          <Route path="/demo" element={<ProductsPage />} />
+          <Route path="/student" element={<Navigate to="/products/crtfy-student" replace />} />
+          <Route path="/services/*" element={<Navigate to="/products" replace />} />
+          <Route path="/platform/*" element={<Navigate to="/products" replace />} />
+          <Route path="/industries" element={<Navigate to="/about" replace />} />
+          <Route path="/sled" element={<Navigate to="/about" replace />} />
+          <Route path="/why-crtfy" element={<Navigate to="/about" replace />} />
+          <Route path="/products/:legacy" element={<Navigate to="/products" replace />} />
+        </Route>
+      </Routes>
+    </>
   )
 }

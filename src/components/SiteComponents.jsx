@@ -61,10 +61,10 @@ export function CTASection({
   eyebrow = 'Built for SLED',
   title = 'Reduce risk, pass audits, and replace vendor sprawl with one accountable platform.',
   description = 'Crtfy helps agencies and institutions secure records, govern AI, protect data, harden cyber operations, and coordinate physical security under one framework.',
-  primaryLabel = 'Talk to Crtfy',
+  primaryLabel = 'Request a demo',
   primaryTo = '#contact',
-  secondaryLabel = 'Explore the platform',
-  secondaryTo = '/platform',
+  secondaryLabel = 'Explore platform',
+  secondaryTo = '/products',
 }) {
   return (
     <section className="cta-panel">

@@ -18,9 +18,12 @@ export default function HomePage() {
               Crtfy helps institutions replace disconnected CRMs, unmanaged AI tools, shared drives, and legacy ECM workflows with connected applications for enrollment operations, governed AI, and intelligent content management.
             </p>
             <div className="hero-actions">
-              <Link to="/products/crtfy-student" className="button button-primary">Explore Crtfy Student</Link>
-              <Link to="/products" className="button button-secondary">See the platform</Link>
+              <a href="#contact" className="button button-primary">Request a demo</a>
+              <Link to="/products" className="button button-secondary">Explore platform</Link>
             </div>
+            <p className="partner-delivery-note">
+              Crtfy is delivered through authorized partners. We will connect your institution with the right implementation team.
+            </p>
             <div className="hero-proof-grid">
               <div><CheckCircle2 size={16} /> Replace admissions CRM workflows</div>
               <div><CheckCircle2 size={16} /> Govern institutional AI use</div>
@@ -113,16 +116,66 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="section-block alt-surface">
+        <div className="container two-column-story">
+          <div>
+            <SectionIntro
+              eyebrow="Partner-delivered for education"
+              title="Crtfy is product-led, partner-delivered."
+              description="Crtfy works with authorized partners to help institutions move from fragmented systems to governed admissions, AI, and content workflows."
+            />
+            <div className="hero-actions partner-actions">
+              <Link to="/partners" className="button button-primary">Connect with a partner</Link>
+              <a href="#contact" className="button button-secondary">Request a demo</a>
+            </div>
+          </div>
+          <div className="partner-card-list">
+            <article className="partner-feature-card">
+              <span className="eyebrow eyebrow-inline">Authorized Partner</span>
+              <img className="partner-logo" src="/shamrock-solutions-logo.png" alt="Shamrock Solutions" />
+              <p>
+                Implementation, integration, workflow configuration, and institutional support for teams adopting Crtfy products.
+              </p>
+              <a
+                className="inline-link"
+                href="https://www.shamrocksolutionsllc.com/contact"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Visit Shamrock Solutions <ArrowRight size={16} />
+              </a>
+            </article>
+            <article className="partner-feature-card">
+              <span className="eyebrow eyebrow-inline">Authorized Partner</span>
+              <div className="partner-logo-shell">
+                <img className="partner-logo partner-logo-wide" src="/talentus-global-logo.svg" alt="Talentus Global" />
+              </div>
+              <p>
+                AI-enabled business solutions, implementation support, and transformation services for institutions adopting Crtfy products.
+              </p>
+              <a
+                className="inline-link"
+                href="https://www.talentusglobal.com/forms/contact-us"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Visit Talentus Global <ArrowRight size={16} />
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <section className="section-block">
         <div className="container">
           <CTASection
             eyebrow="Start with admissions"
             title="See how Crtfy can replace fragmented admissions workflows and extend into AI and content governance."
-            description="The strongest entry point is Crtfy Student: one workspace for every student, document, decision, and next step."
-            primaryLabel="Book a demo"
+            description="Crtfy is available through authorized partners, including Shamrock Solutions and Talentus Global. Request a demo and we will connect your institution with the right team."
+            primaryLabel="Request a demo"
             primaryTo="#contact"
-            secondaryLabel="Explore Crtfy Student"
-            secondaryTo="/products/crtfy-student"
+            secondaryLabel="Partner with us"
+            secondaryTo="/partners"
           />
         </div>
       </section>
