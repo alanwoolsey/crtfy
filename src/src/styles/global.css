@@ -598,14 +598,6 @@ button { font: inherit; }
 }
 .stat-item { padding: 24px; border-right: 1px solid var(--line); }
 .stat-item:last-child { border-right: none; }
-.stat-item-logo {
-  display: block;
-  width: min(250px, 100%);
-  height: 74px;
-  margin: 0 0 10px;
-  object-fit: contain;
-  object-position: left center;
-}
 .stat-item strong {
   display: block;
   margin-bottom: 10px;
@@ -1669,8 +1661,12 @@ th {
 }
 
 .platform-preview-card-primary {
+  transform: translateX(-12px);
   border-color: rgba(19, 176, 165, 0.32);
 }
+
+.platform-preview-card:nth-child(2) { transform: translateX(34px); }
+.platform-preview-card:nth-child(3) { transform: translateX(-4px); }
 
 .platform-preview-card span {
   display: inline-block;

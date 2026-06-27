@@ -11,9 +11,9 @@ const logoBySlug = {
   advisory: '/crtfyadvisory.png',
   compliance: '/crtfycompliance.png',
   risk: '/crtfyrisk.png',
-  'crtfy-ai': '/crtfy-ai-product-logo.png',
-  'crtfy-student': '/crtfy-student-product-logo.png',
-  'crtfy-documents': '/crtfy-content-product-logo.png',
+  'crtfy-ai': '/crtfy-ai-logo.png',
+  'crtfy-student': '/crtfystudent.png',
+  'crtfy-documents': '/crtfy-documents-logo.png',
 }
 
 export default function OfferingLockup({ slug, name, className = '' }) {

@@ -45,11 +45,7 @@ export function StatStrip({ items }) {
     <div className="stat-strip">
       {items.map((item) => (
         <div key={item.label} className="stat-item">
-          {item.logo ? (
-            <img className="stat-item-logo" src={item.logo} alt={`Crtfy ${item.value}`} />
-          ) : (
-            <strong>{item.value}</strong>
-          )}
+          <strong>{item.value}</strong>
           <span>{item.label}</span>
         </div>
       ))}

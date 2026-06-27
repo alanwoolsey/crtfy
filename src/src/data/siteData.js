@@ -30,9 +30,9 @@ export const primaryNav = [
 export const positioningLine = 'Crtfy is the education-first operating platform for admissions, governed AI, and intelligent content management.'
 
 export const homeStats = [
-  { value: 'Student', label: 'Admissions operating system for every student, document, decision, and next step.', logo: '/crtfy-student-product-logo.png' },
-  { value: 'AI', label: 'A governed workspace for approved prompts, sources, assistants, reviews, and audit trails.', logo: '/crtfy-ai-product-logo.png' },
-  { value: 'Content', label: 'Intelligent content management for records, forms, workflows, signatures, retention, and AI search.', logo: '/crtfy-content-product-logo.png' },
+  { value: 'Student', label: 'Admissions operating system for every student, document, decision, and next step.' },
+  { value: 'AI', label: 'A governed workspace for approved prompts, sources, assistants, reviews, and audit trails.' },
+  { value: 'Content', label: 'Intelligent content management for records, forms, workflows, signatures, retention, and AI search.' },
 ]
 
 export const problemCards = [

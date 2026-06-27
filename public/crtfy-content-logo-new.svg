@@ -1,0 +1,20 @@
+<svg width="480" height="128" viewBox="0 0 480 128" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Crtfy Content logo</title>
+  <desc id="desc">Crtfy mark with Crtfy Content wordmark</desc>
+  <defs>
+    <linearGradient id="contentMark" x1="24" y1="14" x2="112" y2="114" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#73D936"/>
+      <stop offset="0.5" stop-color="#15B8B7"/>
+      <stop offset="1" stop-color="#007C89"/>
+    </linearGradient>
+    <linearGradient id="contentCheck" x1="42" y1="58" x2="98" y2="82" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#15B8B7"/>
+      <stop offset="1" stop-color="#007C89"/>
+    </linearGradient>
+  </defs>
+  <path d="M105 24C94.4 14.1 80 8 64 8C30.9 8 4 34.9 4 68C4 101.1 30.9 128 64 128C80.4 128 95.3 121.4 106.1 110.7" stroke="url(#contentMark)" stroke-width="18" stroke-linecap="round"/>
+  <path d="M39 67L62 90L101 51" stroke="url(#contentCheck)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="64" cy="47" r="12" fill="#2EC586"/>
+  <text x="148" y="63" fill="#08265C" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="800" letter-spacing="-1.4">crtfy</text>
+  <text x="148" y="100" fill="#007C89" font-family="Inter, Arial, sans-serif" font-size="31" font-weight="760" letter-spacing="-0.7">Content</text>
+</svg>

@@ -13,7 +13,7 @@ export default function HomePage() {
           <div className="hero-copy">
             <BrandLogo className="hero-brand-logo" />
             <span className="eyebrow">Education-first operating platform</span>
-            <h2>Run admissions, AI, and institutional content from one governed platform.</h2>
+            <h1>Run admissions, AI, and institutional content from one governed platform.</h1>
             <p>
               Crtfy helps institutions replace disconnected CRMs, unmanaged AI tools, shared drives, and legacy ECM workflows with connected applications for enrollment operations, governed AI, and intelligent content management.
             </p>
@@ -31,7 +31,7 @@ export default function HomePage() {
           <div className="hero-mockup hero-screenshot-panel platform-preview-panel">
             <div className="platform-preview-card platform-preview-card-primary">
               <span>Admissions OS</span>
-              <strong>Today’s Work / Student 360</strong>
+              <strong>Today’s Work</strong>
               <p>Needs attention, close to completion, ready for decision, exceptions.</p>
             </div>
             <div className="platform-preview-card">
