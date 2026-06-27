@@ -3,7 +3,6 @@ import { Navigate, NavLink, Outlet, Route, Routes, useLocation } from 'react-rou
 import { Blocks, Bot, ChevronDown, FileStack, GraduationCap, Menu } from 'lucide-react'
 import HomePage from './pages/HomePage'
 import StudentPage from './pages/StudentPage'
-import ResourcesPage from './pages/ResourcesPage'
 import BrandLogo from './components/BrandLogo'
 import ProductShell from './components/ProductShell'
 import { StudentRecordsProvider } from './context/StudentRecordsContext'
@@ -131,7 +130,6 @@ function Footer() {
           <div className="footer-links">
             <NavLink to="/products">Products</NavLink>
             <NavLink to="/about">About</NavLink>
-            <NavLink to="/resources">Resources</NavLink>
           </div>
         </div>
         <div>
@@ -184,7 +182,7 @@ export default function App() {
         <Route path="/products/crtfy-student" element={<StudentPage />} />
         <Route path="/products/crtfy-documents" element={<OfferingPage offering={offeringLookup['crtfy-documents']} />} />
         <Route path="/products" element={<ProductsPage />} />
-        <Route path="/resources" element={<ResourcesPage />} />
+        <Route path="/resources" element={<Navigate to="/products" replace />} />
         <Route path="/demo" element={<ProductsPage />} />
         <Route path="/student" element={<Navigate to="/products/crtfy-student" replace />} />
         <Route path="/services/*" element={<Navigate to="/products" replace />} />

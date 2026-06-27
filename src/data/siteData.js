@@ -24,7 +24,6 @@ export const primaryNav = [
   { to: '/products/crtfy-student', label: 'Crtfy Student' },
   { to: '/products/crtfy-ai', label: 'Crtfy AI' },
   { to: '/products/crtfy-documents', label: 'Crtfy Content' },
-  { to: '/resources', label: 'Resources' },
 ]
 
 export const positioningLine = 'Crtfy is the education-first operating platform for admissions, governed AI, and intelligent content management.'
